@@ -8,7 +8,7 @@ There are 44 places found, 22 from inner Budapest and the other 22 from outer Bu
 
 Rating scores, as well as the number of ratings, are from Google Reviews of each restaurant.
 
-All restaurants were searched via goole map, with food prices displayed on each restaurant's website menu or their Netpincer webpages.
+All restaurants were searched via Google Map, with food prices displayed on each restaurant's website menu or their Netpincer webpages.
 
 Distances (from CEU campus to the pizza restaurant) are from Google map. We took the shortest distance between the two places. 
 
