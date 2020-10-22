@@ -5,7 +5,7 @@ Pizza dataset
 Data in this set were collected online from different pizza places in inner Budapest and outer Budapest, which contain prices of 32cm margherita pizza and of 0.5L beverage. 
 
 As the size difference between 30 cm, 31cm and 32cm pizza is not too much (1-2 cm) and their price are almost identical (with 100-400 Hungarian forint difference), we decided to consider these pizzas as of the same type (category), and recorded them in one column **marpizza_price 30-32cm (in HUF)**.
-As Pepsi, Cola, Sprite, Canada Dry is offered in the Soft Drinks category in many pizzerias and their prices are almost same, we included them in one variable called beverages. In some other pizzerias, some other type of soft drinks and 0.5l beers were available. Therefore, we decided to include them also as a beverages to this variable
+As Pepsi, Cola, Sprite, Canada Dry is offered in the Soft Drinks category in many pizzerias and their prices are almost same, we included them in one variable called **beverage_price 0.5L (In HUF)**. In some other pizzerias, some other type of soft drinks and 0.5l beers were available. Therefore, we decided to include them also as a beverages to this variable
 
 There are 44 places found, 22 from inner Budapest and the other 22 from outer Budapest.
 
