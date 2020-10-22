@@ -2,7 +2,7 @@
 Task1: Team project. Data analysis 1
 Pizza dataset
 
-Data in this set were collected online from different pizza places in inner Budapest and outer Budapest, which contain prices of 32cm margherita pizza and of 0.5L beverage.
+Data in this set were collected online from different pizza places in inner Budapest and outer Budapest, which contain prices of 32cm margherita pizza and of 0.5L beverage. As Pepsi, Cola, Sprite, Canada Dry is offered in the Soft Drinks category in many pizzerias and their prices are almost same, we included them in one variable called beverages. In some other pizzerias, some other type of soft drinks and 0.5l beers were available. Therefore, we decided to include them also as a beverages to this variable
 
 There are 44 places found, 22 from inner Budapest and the other 22 from outer Budapest.
 
