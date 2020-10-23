@@ -16,10 +16,12 @@ output:
 ---
 
 ## Introduction
-<font size="3"> In this exercise, we want to compare the margherita pizza price and beverage price from pizza restaurants in inner and outer Budapest.  take 44 observations from inner and outer Budapest pizza restaurants on their
-32cm Margherita Pizza and beverage price. 
+<font size="3"> In this exercise, we want to compare the margherita pizza price and beverage price from pizza restaurants in inner and outer Budapest. Data in this set were collected from different online sources, such as restaurant website and www.netpincer.hu. There are 44 observations from inner and outer Budapest pizza restaurants on their 32cm Margherita Pizza and 0.5l beverage price. 
 </font> 
 
+<font size="3">
+All three members of the team recorded the observations in one Google Sheet. However, some duplicates were found. We decided to leave one such observation and drop the other duplicate observations as they had the same value for all variables. Deciding which method to use for measuring the distance was problematic. We decided to use "Measure distance" functionality of Google Map as it works as a "ruler on the map" manner and shows the same distance between two points no matter when the distance was checked. Deciding which size of pizza to choose was problematic, too.  As the pizza of size 30cm. 31cm, and 32cm were observed most frequently, we decided to record these pizzas in one variable, in column marpizza_price.
+</font>
 
 ## Descriptive Statistics
 <font size="3"> The following table shows some important summary in the dataset on margherita pizza price and beverage price. Average price for margherita pizza is HUF1801, and HUF457 for beverage. The mean is a little bit higher than the median in both pizza and beverage prices, which suggests a somewhat skewed distribution with a samll right tail. 
