@@ -1,11 +1,11 @@
 ---
 title: "Task 2 by Team A"
-geometry: "left=2cm,right=2cm,top=1cm,bottom=1.5cm"
+geometry: "left=1cm,right=1cm,top=1cm,bottom=1.5cm"
 classoption: fleqn
 header-includes:
    - \usepackage{setspace}
    - \singlespacing
-fontsize: 11pt
+fontsize: 10.5pt
 mainfont: Calibri
 sansfont: Calibri
 monofont: Calibri
