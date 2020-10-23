@@ -18,7 +18,7 @@ output:
 </font> 
 
 <font size="3">
-We recorded the observations in one Google Sheet. However, some duplicates were found. We decided to leave one such observation and drop the other duplicates as they had the same value for all variables. It was problematic to find the method to use for measuring the distance. We used "Measure distance" functionality of Google Map as it works as a "ruler on the map" manner and shows the same distance between two points no matter when the distance was checked. Deciding which size of pizza to choose was problematic, too. As the pizza of size 30cm, 31cm, and 32cm were observed most frequently, and most restaurants treat pizzas in this rand as same size(12 inches), we decided to record these pizzas in one variable, in column marpizza_price.
+We recorded the observations in one Google Sheet. However, some duplicates were found. We decided to leave one such observation and drop the other duplicates as they had the same value for all variables. It was problematic to find the method to use for measuring the distance. We used "Measure distance" functionality of Google Map as it works as a "ruler on the map" manner and shows the same distance between two points no matter when the distance was checked. Deciding which size of pizza to choose was problematic, too. As the pizza of size 30cm, 31cm, and 32cm were observed most frequently, and most restaurants treat pizzas in this range as same size(12 inches), we decided to record these pizzas in one variable, in column marpizza_price.
 </font>
 
 ## Descriptive Statistics
@@ -141,6 +141,3 @@ The t-statistic is 1.31, well within ±2SE (Do not Reject region), thus we canno
 The 95% confidence interval [-68.95722, 303.13904] contains $H_{0}$ value of zero, which means we are 95% confident that the true average price will not fall outside this range. We can expect that on average, the null hypothesis is rejected 5% of the time given a 5% level of significance and that on average, a type I error will occur 5% of the time.
 
 In one word, the average Margherita Pizza price in Inner and Outer Budapest is the same, based on our study.
-
-
-
