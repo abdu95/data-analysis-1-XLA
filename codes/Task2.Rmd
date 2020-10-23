@@ -98,7 +98,7 @@ ggplot(pizza_data, aes(x = beverage_price)) +
 ```
 
 ## Conditional Descriptive Graphs
-```{r, figures-side2, fig.show="hold", out.width="50%", message=FALSE, echo=FALSE}
+```{r, figures-side2, fig.show="hold", out.width="90%",fig.height=3,fig.width=7,message=FALSE, echo=FALSE}
 # Plot the pizza price difference between Inner and Outer Budapest in two histograms
 ggplot(data = pizza_data, aes(x= marpizza_price, fill = Inner_Outer)) +
   geom_histogram(aes(y = ..density..), binwidth = 100, color = 'black', fill='white', alpha =0.5) +
