@@ -1,1 +1,89 @@
+---
+title: Task 2
+author: Team A
+date: October 25, 2020
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+\fontsize{12}{22}
+\fontseries{b}
+\selectfont
+
+## Descriptive Statistics
+<font size="3"> Discuss the data collection, difficulties, problems. How you picked the beverage.
+How did you decide on store features to record and how did you code it? (1-2
+paragraphs) [3p]</font> 
+
+```{r, include= FALSE, message=FALSE, echo=FALSE}
+library("readxl")
+library(tidyverse)
+library(moments)
+library(ggpubr)
+library(cowplot)
+library(dplyr)
+library(kableExtra)
+read_excel('/Users/xinqi/Desktop/DA1 Team A/Team A Pizza Data.xlsx')
+pizza_data<- read_excel('/Users/xinqi/Desktop/DA1 Team A/Team A Pizza Data.xlsx')
+
+
+summary_pizza_price<- pizza_data %>% summarise(
+  Obs      = 'pizza',
+  n        = sum( !is.na( marpizza_price ) ),
+  mean     = round(mean(marpizza_price),digits = 2),
+  median   = median(marpizza_price),
+  min      = min(marpizza_price),
+  max      = max(marpizza_price),
+  sd      = round(sd(marpizza_price),digits = 2),
+  skew     = round(skewness(marpizza_price),digits = 2))
+
+
+summary_bev_price<- pizza_data %>% summarise(
+  Obs      = 'Beverage',
+  n        = sum( !is.na( beverage_price ) ),
+  mean     = round(mean(beverage_price),digits = 2),
+  median   = median(beverage_price),
+  min      = min(beverage_price),
+  max      = max(beverage_price),
+  sd      = round(sd(beverage_price),digits = 2),
+  skew     = round(skewness(beverage_price),digits = 2))
+
+
+price_summary <- summary_pizza_price %>% add_row( summary_bev_price ) 
+price_summary
+rm( summary_pizza_price , summary_bev_price )
+```
+```{r, message=FALSE, echo=FALSE}
+price_summary %>% 
+kbl(caption = "Descriptive Statistics for Margherita pizza and Beverage prices in Budapest", font_size = 3) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F, position = "float_right", font_size = 15)
+```
+
+## Descriptive Graphs
+<font size="3"> Show two descriptive graphs of price distributions of your products in the whole
+data. [2p]</font> 
+
+```{r, figures-side, fig.show="hold", out.width="50%", message=FALSE, echo=FALSE}
+ggplot(pizza_data, aes(x = marpizza_price)) + 
+  geom_histogram(aes(y =..density..), 
+                 colour= "black", 
+                 fill = "white",
+                 binwidth = 100) +
+  geom_density(alpha=.2, fill="orange") +
+  geom_vline(aes(xintercept = mean(marpizza_price, na.rm=T)),   # Ignore NA values for mean
+             color="orange", linetype="dashed", size=1) +
+  labs(x = 'Margherita pizza Price', y = 'Density')
+
+##### Beverage price
+ggplot(pizza_data, aes(x = beverage_price)) + 
+  geom_histogram(aes(y =..density..), 
+                 colour= "black", 
+                 fill = "white",
+                 binwidth = 30) +
+  geom_density(alpha=.2, fill="orange") +
+  geom_vline(aes(xintercept = mean(beverage_price, na.rm=T)),   # Ignore NA values for mean
+             color="orange", linetype="dashed", size=1) +
+  labs(x = 'Beverage Price', y = 'Density')
+```
 
