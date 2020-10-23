@@ -14,15 +14,15 @@ output:
 ---
 
 ## Introduction
-<font size="3"> In this exercise, we want to compare the margherita pizza price and beverage price from pizza restaurants in inner and outer Budapest. Data in this set were collected from different online sources, such as restaurant website and [Netpincer](www.netpincer.hu). There are 44 observations from inner and outer Budapest pizza restaurants on their 32cm Margherita Pizza and 0.5l beverage price. 
+<font size="3"> In this exercise, we want to compare the price difference of margherita pizza price from pizza restaurants in inner and outer Budapest, and that of and beverage as well. Data in this set were collected from different online sources, such as restaurant website and [Netpincer](www.netpincer.hu). There are 44 observations from inner and outer Budapest pizza restaurants on their 32cm Margherita Pizza and 0.5l beverage price. 
 </font> 
 
 <font size="3">
-We recorded the observations in one Google Sheet. However, some duplicates were found. We decided to leave one such observation and drop the other duplicates as they had the same value for all variables. It was problematic to find the method to use for measuring the distance. We used "Measure distance" functionality of Google Map as it works as a "ruler on the map" manner and shows the same distance between two points no matter when the distance was checked. Deciding which size of pizza to choose was problematic, too.  As the pizza of size 30cm. 31cm, and 32cm were observed most frequently, we decided to record these pizzas in one variable, in column marpizza_price.
+We recorded the observations in one Google Sheet. However, some duplicates were found. We decided to leave one such observation and drop the other duplicates as they had the same value for all variables. It was problematic to find the method to use for measuring the distance. We used "Measure distance" functionality of Google Map as it works as a "ruler on the map" manner and shows the same distance between two points no matter when the distance was checked. Deciding which size of pizza to choose was problematic, too. As the pizza of size 30cm, 31cm, and 32cm were observed most frequently, and most restaurants treat pizzas in this rand as same size(12 inches), we decided to record these pizzas in one variable, in column marpizza_price.
 </font>
 
 ## Descriptive Statistics
-<font size="3"> The following table shows some important summary in the dataset on margherita pizza price and beverage price. Average price for margherita pizza is HUF1801, and HUF457 for beverage. The mean is a little bit higher than the median in both pizza and beverage prices, which suggests a somewhat skewed distribution with a samll right tail. 
+<font size="3"> The following table shows some important summary in the dataset on margherita pizza price and beverage price. Average price for margherita pizza is HUF1801, and HUF457 for beverage. The mean is a little bit higher than the median in both pizza and beverage prices, which suggests a somewhat skewed distribution with a small right tail. 
 </font> 
 
 ```{r, include= FALSE, message=FALSE, echo=FALSE}
@@ -105,7 +105,7 @@ ggplot(pizza_data, aes(x = beverage_price)) +
 ggplot(data = pizza_data, aes(x= marpizza_price, fill = Inner_Outer)) +
   geom_histogram(aes(y = ..density..), binwidth = 100, color = 'black', fill='white', alpha =0.5) +
   geom_density(alpha=0.2, fill = 'orange')+
-  labs(x= 'Pizza Price: Inner VS. Outer Budapest', y= 'Relative Frenquency') +
+  labs(x= 'Pizza Price: Inner vs. Outer Budapest', y= 'Relative Frenquency') +
   facet_wrap(~Inner_Outer) +
   geom_vline(aes(xintercept = mean(marpizza_price, na.rm=T)),
              color= 'orange', linetype= 'dashed', size=1)
@@ -138,7 +138,7 @@ t | df | p-value | 95 % confidence interval | mean of x
 
 The t-statistic is 1.31, well within ±2SE (Do not Reject region), thus we cannot reject the null hypothesis of zero difference. In addition, from P-value of 0.2047, which means that the smallest significance at which we can reject the null is 20.47%, far larger than our pre-set initial target of 5%, we cannot reject the null.
 
-The 95% confidence interval [-68.95722, 303.13904] contains $H_{0}$ value of zero, which means we are 95% confident that the true average price will not fall outside this range. We can expect that on average, the null hypothesis is rejected 5% of the time given a 5% level of confidence and that on average, a type I error will occur 5% of the time.
+The 95% confidence interval [-68.95722, 303.13904] contains $H_{0}$ value of zero, which means we are 95% confident that the true average price will not fall outside this range. We can expect that on average, the null hypothesis is rejected 5% of the time given a 5% level of significance and that on average, a type I error will occur 5% of the time.
 
 In one word, the average Margherita Pizza price in Inner and Outer Budapest is the same, based on our study.
 
