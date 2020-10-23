@@ -98,6 +98,8 @@ ggplot(pizza_data, aes(x = beverage_price)) +
 ```
 
 ## Conditional Descriptive Graphs
+<font size="3"> This figure shows two histograms of inner and outer Budapest pizza prices, with same bin size (100 HUF). The range starts slightly below 1250 HUF in Outer and above 1250 HUF in Inner; it ends below 2350 HUF in Outer while it goes above 2650 HUF in Inner. Inner Budapest price distribution is more spread out, and price tends to be higher in Inner Budapest. Both Inner and Outer, however, have 50% price falls below 1800 HUF and 50% price above that. Also, both have a single mode, in different location, though. The mode bin in Inner is (1750, 1850), and it is (1550, 1650) for Outer.
+</font> 
 ```{r, figures-side2, fig.show="hold", out.width="90%",fig.height=3,fig.width=7,message=FALSE, echo=FALSE}
 # Plot the pizza price difference between Inner and Outer Budapest in two histograms
 ggplot(data = pizza_data, aes(x= marpizza_price, fill = Inner_Outer)) +
