@@ -4,7 +4,6 @@ library(moments)
 library(ggpubr)
 library(cowplot)
 library(dplyr)
-library(kableExtra)
 
 # Import data into R using relative path
 
